@@ -1,3 +1,3 @@
 <?php 
-    echo "Bismillah"
+    include("src/pages/login.php");
 ?>

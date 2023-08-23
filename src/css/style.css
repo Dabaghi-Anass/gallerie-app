@@ -1,0 +1,69 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    --green : #1FF092;
+    --red : #F70828;
+    --blue : #6699FF;
+    --light-grey : #B3B3B3;
+    --dark-grey : #333333;
+    --white: #FFFFFF;
+    --fs-lg : 30px;
+    --fs-xl : 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+main{
+    height :100%;
+    width: 100%;
+}
+.login-page{
+    display: grid;
+    place-content: center;
+}
+.auth-container{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    border-radius: .2rem;
+    width: min(100%,800px);
+    padding: 3rem 1rem;
+    gap :1rem;
+}
+.auth-container p {
+    font-size: var(--fs-xl);
+    text-align: center;
+}
+.app-input{
+    padding: .5rem;
+    border: 1px solid var(--light-grey);
+    border-radius: .2rem;
+    margin-block: .5rem;
+    outline: none;
+    width: 100%;
+}
+.btn{
+    --_bg : black;
+    padding: .5rem 1rem;
+    color: var(--white);
+    background: var(--_bg);
+    border: 1px solid var(--_bg);
+    border-radius: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms;
+}
+.btn:hover{
+    background: transparent;
+    color: var(--_bg);
+}
+
+.btn-large{
+    width: 100%;
+}
