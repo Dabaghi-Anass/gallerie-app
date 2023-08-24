@@ -8,20 +8,23 @@
 </head>
 <body>
     <main class="container">
-    <form class="auth-container" action="./profile.php" method="post">
-        <p>Login</p>
+    <form class="auth-container" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+        
         <div class="form-inputs">
             <div class="input-container">
-            <input name="email" type="email" placeholder="Enter Your Email" class="app-input">
+            <input type="text" name="name" placeholder="User name" class="app-input">
+            <ion-icon name="person" class="icon"></ion-icon>
+            </div>
+            <div class="input-container">
+            <input name="email" type="email" placeholder="User Email" class="app-input">
             <ion-icon name="at-circle" class="icon"></ion-icon>
             </div>
             <div class="input-container">
-            <input name="password" id="password" type="password" placeholder="Enter Your Password" class="app-input">
+            <input name="password" id="password" type="password" placeholder="Enter new Password" class="app-input">
               <ion-icon id="eye-icon" class="icon" onclick="toggleHideInput()" name="eye-outline"></ion-icon>
             </div>
-            <button class="btn auth-btn btn-large">Login</button>
+            <button class="btn auth-btn btn-large">Save</button>
         </div>
-        <a href="./register.php" class="link">don't have an account ?</a>
     </form>
     </main>
     <script>

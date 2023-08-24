@@ -8,7 +8,7 @@
 </head>
 <body>
     <main class="container">
-    <form class="auth-container" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+    <form class="auth-container" action="./profile.php" method="post">
         <p>Register</p>
         <div class="form-inputs">
             <div class="input-container">
