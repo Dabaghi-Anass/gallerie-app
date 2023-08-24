@@ -7,11 +7,13 @@
     <title>Gallerie App</title>
 </head>
 <body>
-    <main class="login-page">
-    <form class="auth-container" action="/" method="post">
+    <main class="container">
+    <form class="auth-container" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
         <p>Login</p>
         <div class="form-inputs">
-            <input name="email" type="email" placeholder="Enter Your Email" class="app-input">
+            <div class="input-container">
+                <input name="email" type="email" placeholder="Enter Your Email" class="app-input">
+            </div>
             <div class="input-container">
             <input name="password" type="password" placeholder="Enter Your Password" class="app-input">
             <ion-icon name="eye-outline"></ion-icon>
