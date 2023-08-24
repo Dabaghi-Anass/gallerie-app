@@ -31,7 +31,7 @@ main{
     background: var(--white);
     border: 1px solid var(--light-grey);
     border-radius: .2rem;
-    width: min(100%,800px);
+    width: min(400px,100vw);
     padding: 3rem 1rem;
     gap :1rem;
 }
@@ -71,7 +71,24 @@ main{
     align-items: center;
     border: 1px solid var(--light-grey);
     border-radius: .2rem;
-    margin-block: .5rem;
+    margin-block: .2rem;
     width: 100%;
     overflow: hidden;
+    padding: .3rem 1rem;
+}
+.icon{
+    font-size: 20px;
+}
+.link{
+    color: var(--light-grey);
+    font-size: .8rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+}
+.auth-btn{
+    margin-top: 1rem;
 }
