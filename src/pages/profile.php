@@ -14,7 +14,7 @@
         <div class="profile-picture-container" data-count="20">
             <img class="profile-picture" src="../assets/images/profile.jpg" alt="">
             <div class="overlay">
-            <ion-icon name="cloud-upload-outline"></ion-icon>
+                <ion-icon name="cloud-upload-outline"></ion-icon>
             </div>
         </div>
         <div class="info">

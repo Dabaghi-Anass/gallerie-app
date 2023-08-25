@@ -3,13 +3,8 @@
 <html>
   <head>
     <title>Redirecting...</title>
-    <link rel="stylesheet" href="src/css/style.css">
     <link rel="shortcut icon" href="src/assets/icons/favicon.ico" type="image/x-icon">
-    <script>
-      function redirect() {
-        window.location = " < ? php echo $redirectURL; ? > ";
-      }
-    </script>
+    <link rel="stylesheet" href="src/css/style.css">
   </head>
   <body>
     <main class="container index-container">
@@ -22,14 +17,14 @@
     <script>
         let redirectURL = "src/pages/login.php";
         function redirect() {
-        window.location =  redirectURL;
-      }
+         window.location = redirectURL;
+      	}
       let texts = ["GALLERIE-APP",
        "Exploring the Pixels: Unleashing Stunning Images for You...",
-        "Gathering the Moments: Your Visual Journey is About to Begin",
-         "Painting the Canvas: Bringing Spectacular Images Just for You.",
-          "Crafting Visual Stories: Loading Images to Spark Your Imagination.",
-           "Weaving the Visual Tapestry: Images Loading to Inspire Your Day."];
+       "Gathering the Moments: Your Visual Journey is About to Begin",
+       "Painting the Canvas: Bringing Spectacular Images Just for You.",
+        "Crafting Visual Stories: Loading Images to Spark Your Imagination.",
+        "Weaving the Visual Tapestry: Images Loading to Inspire Your Day."];
       let currentIndex = 0;
       var id;
       const welcomeTextContainer = document.getElementById("welcome-text");
@@ -38,15 +33,15 @@
         clearTimeout(id);
         redirect();
       }
-      function changeText() {
+      function changeText(){
           slider.style.setProperty("opacity" , `${0}`);
           setTimeout(()=>{
             slider.style.setProperty("opacity" , `${1}`);
             },2000)
-        if (currentIndex >= texts.length) currentIndex = 0;
-        welcomeTextContainer.innerHTML = texts[currentIndex];
-        currentIndex++;
-        setTimeout(changeText,3000)
+        	if (currentIndex >= texts.length) currentIndex = 0;
+        	welcomeTextContainer.innerHTML = texts[currentIndex];
+        	currentIndex++;
+        	setTimeout(changeText,3000)
       }
       changeText()
       id = setTimeout(skip,3000 * texts.length);
