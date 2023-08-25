@@ -7,7 +7,7 @@
 html,body{
     --green : #1FF092;
     --red : #F70828;
-    --blue : #6699FF;
+    --blue : #001A45;
     --light-grey : #B3B3B3;
     --dark-grey : #333333;
     --white: #FFFFFF;
@@ -55,7 +55,7 @@ main{
 
 }
 .btn{
-    --_bg : black;
+    --_bg :black;
     padding: .5rem 1rem;
     color: var(--white);
     background: var(--_bg);
@@ -83,6 +83,7 @@ main{
     width: 100%;
     overflow: hidden;
     padding: .3rem 1rem;
+    background-color: var(--white);
 }
 .icon{
     font-size: 20px;
@@ -179,7 +180,7 @@ main{
 }
 .profile-container{
     padding: 0 1rem 3rem 1rem;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .welcome-text-container{
     display: flex;
@@ -206,4 +207,60 @@ main{
     top: 0;
     right: 0;
     transform: translate(-50%,50%);
+}
+.profile-page{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.navigation{
+    width:100% ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--blue);
+    padding: 1rem ;
+    gap: 1rem;
+
+}
+.user-images-container .btn{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: .5rem;
+            text-transform: uppercase;
+           
+}
+.user-images-container .btn ion-icon{
+                 font-size: 22px;
+}
+.user-images-container {
+    width: 100%;
+}
+.icons{
+    width: 100%;
+    display: flex;
+    align-items: center ;
+    gap : .3rem;
+    font-size: 22px;
+    padding: .5rem;
+    background-color: #F70828;
+   
+}
+.icon-btn{
+    color: var(--clr);
+    padding: .2rem;
+    border-radius: .1rem;
+    transition: all 300ms;
+}
+.icon-btn:hover{
+     background-color: var(--clr) ;
+     color: var(--white);
+
+}
+.icon-btn:last-child{
+    align-self: end;
+    background-color: #003399;
+    
 }

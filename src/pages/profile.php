@@ -8,7 +8,7 @@
     <title>Gallerie App</title>
 </head>
 <body>
-    <main class="container">
+    <main class="container profile-page" >
     <div class="auth-container profile-container" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
         <div class="image-container">
         <div class="profile-picture-container" data-count="20">
@@ -37,6 +37,35 @@
             </div>
             <button class="btn auth-btn btn-large">Save</button>
         </div>
+</div>
+<div class="user-images-container">
+    <div class="navigation">
+    <div class="input-container">
+            <input name="search" id="search" type="search" placeholder="search..." class="app-input">
+              <ion-icon  class="icon"  name="search-outline"></ion-icon>
+            </div>
+    <div class="buttons">
+        <div class="spinner">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <button style="--_bg:var(--green);" class="btn"><ion-icon name="cloud-upload-outline"></ion-icon>upload</button>
+        </div>
+    </div>
+    <div class="images-container">
+            <div class="image">
+                    <img src="/src/assets/images/gallerie-app-design.png" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+
+
+    </div>
 </div>
     </main>
     <script>
