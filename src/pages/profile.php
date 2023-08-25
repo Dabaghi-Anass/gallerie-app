@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
     <title>Gallerie App</title>
 </head>
 <body>
@@ -12,6 +13,9 @@
         <div class="image-container">
         <div class="profile-picture-container" data-count="20">
             <img class="profile-picture" src="../assets/images/profile.jpg" alt="">
+            <div class="overlay">
+            <ion-icon name="cloud-upload-outline"></ion-icon>
+            </div>
         </div>
         <div class="info">
         <h6 class="user-name">user name</h6>

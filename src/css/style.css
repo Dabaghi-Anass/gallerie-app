@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 *,*::before,*::after{
     box-sizing: border-box;
     margin: 0;
@@ -23,23 +24,24 @@ main{
 }
 .container{
     display: grid;
-    place-content: center;
+    place-items: center;
+    padding: 1remS;
 }
 .auth-container{
-    --_width : 60%;
+    --_width : 40%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     background: var(--white);
     border: 1px solid var(--light-grey);
     border-radius: .2rem;
-    width: min(400px,100vw);
+    width: min(400px,100%);
     padding: 3rem 1rem;
     gap :1rem;
 }
 .image-container{
     position: relative;
-    height: 220px;
+    height: 180px;
 }
 .auth-container p {
     font-size: var(--fs-xl);
@@ -120,18 +122,36 @@ main{
     right: 0;
     z-index: 10;
     background: var(--red);
-    width: 40px;
-    font-size: 21px;
+    width: 20px;
+    font-size: 16px;
     color: var(--white);
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.3rem;
+    padding: 1rem;
     aspect-ratio: 1;
     line-height: .1;
     border-radius: 100%;
     border: 3px solid white;
+}
+.profile-picture-container .overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-xl);
+    color: white;
+    cursor: pointer;
+    z-index: 9;
+    transition: opacity 300ms;
+    opacity: 0;
+}
+.profile-picture-container .overlay:hover{
+    opacity: 1;
 }
 .profile-picture{
   width: 100%;
@@ -159,4 +179,31 @@ main{
 }
 .profile-container{
     padding: 0 1rem 3rem 1rem;
+    margin-top: 50px;
+}
+.welcome-text-container{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+#welcome-text{
+    font-weight: bold;
+    font-size: var(--fs-lg);
+    font-family: 'Handlee', cursive;
+
+}
+#slider{
+    inset: 0;
+    background: white;
+    position: absolute;
+    z-index: 10;
+    transition: opacity 200ms;
+    opacity: 0;
+}
+.skip{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-50%,50%);
 }
