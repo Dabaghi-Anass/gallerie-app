@@ -8,8 +8,16 @@
 </head>
 <body>
     <main class="container">
-    <form class="auth-container" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-        
+    <div class="auth-container profile-container" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+        <div class="image-container">
+        <div class="profile-picture-container" data-count="20">
+            <img class="profile-picture" src="../assets/images/profile.jpg" alt="">
+        </div>
+        <div class="info">
+        <h6 class="user-name">user name</h6>
+        <h6 class="user-email">example@email.com</h6>
+        </div>
+        </div>
         <div class="form-inputs">
             <div class="input-container">
             <input type="text" name="name" placeholder="User name" class="app-input">
@@ -25,7 +33,7 @@
             </div>
             <button class="btn auth-btn btn-large">Save</button>
         </div>
-    </form>
+</div>
     </main>
     <script>
         let passwordInput = document.getElementById("password");
