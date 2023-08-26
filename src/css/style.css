@@ -18,14 +18,16 @@ html,body{
     height: 100%;
 }
 
+
 main{
-    height :100%;
     width: 100%;
 }
 .container{
-    display: grid;
-    place-items: center;
-    padding: 1remS;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 100%;
 }
 .auth-container{
     --_width : 40%;
@@ -102,19 +104,15 @@ main{
     margin-top: 1rem;
 }
 .profile-picture-container{
-    position: absolute;
+    position: relative;
     background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: var(--_width);
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,-50%);
     border: 10px solid white;
-    outline: 1px solid var(--light-grey);
-    z-index: 1;
+    margin: 0 auto;
 }
 .profile-picture-container::before{
     content: attr(data-count);
@@ -161,7 +159,6 @@ main{
   border-radius: 50%;
 }
 .info{
-    margin-top: calc(var(--_width) / 2);
     font-size: var(--fs-lg);
     display: flex;
     align-items: center;
@@ -179,8 +176,8 @@ main{
     color: #003399;
 }
 .profile-container{
-    padding: 0 1rem 3rem 1rem;
-    margin-top: 100px;
+    position: sticky;
+    top: 1rem;
 }
 .welcome-text-container{
     display: flex;
@@ -213,6 +210,7 @@ main{
     flex-direction: row;
     align-items: flex-start;
     gap: 1rem;
+    padding: 1rem;
 }
 .navigation{
     width:100% ;
@@ -241,26 +239,47 @@ main{
 .icons{
     width: 100%;
     display: flex;
-    align-items: center ;
+    align-items: center;
     gap : .3rem;
-    font-size: 22px;
     padding: .5rem;
-    background-color: #F70828;
    
 }
 .icon-btn{
     color: var(--clr);
     padding: .2rem;
     border-radius: .1rem;
+    font-size: var(--fs-lg);
     transition: all 300ms;
 }
 .icon-btn:hover{
      background-color: var(--clr) ;
      color: var(--white);
-
 }
 .icon-btn:last-child{
-    align-self: end;
-    background-color: #003399;
-    
+    align-self: flex-end;
+}
+.grow{
+    width: 100%;
+}
+.image{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--light-grey);
+}
+.image img{
+    aspect-ratio: 1;
+    width: 100%;
+    object-fit: cover;
+}
+.images-container{
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap: 1rem;
+}
+@media (max-width : 800px){
+    .profile-page{
+        flex-direction: column;
+        align-items: center;
+    }
 }
