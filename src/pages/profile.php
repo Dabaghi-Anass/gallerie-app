@@ -12,7 +12,7 @@
     <div class="auth-container profile-container" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
         <div class="image-container">
         <div class="profile-picture-container" data-count="20">
-            <img class="profile-picture" src="../assets/images/profile.jpg" alt="">
+            <img class="profile-picture" src="https://source.unsplash.com/random" alt="">
             <div class="overlay">
                 <ion-icon name="cloud-upload-outline"></ion-icon>
             </div>
