@@ -288,6 +288,7 @@ main{
     right: 0;
     z-index: 12;
     transform: translate(-50%,-50%);
+    font-size: var(--fs-lg);
 
 }
 .scroll-to-top:hover{
