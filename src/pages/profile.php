@@ -55,7 +55,7 @@
     </div>
     <div class="images-container">
             <div class="image">
-                    <img src="/src/assets/images/gallerie-app-design.png" alt="gallerie-app" class="">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
                         <div class="icons">
                             <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
                             <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="image">
-                    <img src="/src/assets/images/gallerie-app-design.png" alt="gallerie-app" class="">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
                         <div class="icons">
                             <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
                             <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="image">
-                    <img src="/src/assets/images/gallerie-app-design.png" alt="gallerie-app" class="">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
                         <div class="icons">
                             <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
                             <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
@@ -84,6 +84,237 @@
                             <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
                 </div>
             </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="https://source.unsplash.com/random" alt="gallerie-app" class="">
+                        <div class="icons">
+                            <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
+                            <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                             <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                             <div class="grow"></div>
+                            <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                </div>
+            </div>
+            
     </div>
 </div>
     </main>
