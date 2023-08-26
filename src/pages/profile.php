@@ -39,10 +39,10 @@
         </div>
 </div>
 <div class="user-images-container">
-    <div class="navigation">
+    <div class="navigation" id="navigation">
     <div class="input-container">
             <input name="search" id="search" type="search" placeholder="search..." class="app-input">
-              <ion-icon  class="icon"  name="search-outline"></ion-icon>
+              <ion-icon  class="icon search-icon" name="search-outline"></ion-icon>
             </div>
     <div class="buttons">
         <div class="spinner">
@@ -318,6 +318,7 @@
     </div>
 </div>
     </main>
+    <a href="#navigation" class="btn scroll-to-top"><ion-icon name="chevron-up-circle-outline"></ion-icon></a>
     <script>
         let passwordInput = document.getElementById("password");
         let icon = document.getElementById("eye-icon");

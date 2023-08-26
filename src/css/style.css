@@ -278,6 +278,21 @@ main{
     grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
     gap: 1rem;
 }
+.search-icon:hover{
+    transition: opacity 300ms;
+    opacity: .7;
+}
+.scroll-to-top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 12;
+    transform: translate(-50%,-50%);
+
+}
+.scroll-to-top:hover{
+    background: var(--white);
+}
 @media (max-width : 800px){
     .profile-page{
         flex-direction: column;
