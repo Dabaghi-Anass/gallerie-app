@@ -1,8 +1,8 @@
 <?php
     include("../utils/database/database_connection.php");
     $conn = connectToDb();
-    include("../utils/database/getCurrentUser.php");
-    //mysqli_close($conn);
+    include("../utils/database/get_current_user.php");
+    mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,34 +15,35 @@
 </head>
 <body>
     <main class="container profile-page" >
-    <div class="auth-container profile-container" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+    <div class="auth-container profile-container" id="user_form" >
         <div class="image-container">
         <div class="profile-picture-container" data-count="20">
-            <img class="profile-picture" src="https://source.unsplash.com/random" alt="">
-            <div class="overlay">
+            <img class="profile-picture" data-name="profile-image" src="<?= $current_user["profile_image_url"] ?>" alt="">
+            <label class="overlay">
                 <ion-icon name="cloud-upload-outline"></ion-icon>
-            </div>
+                <input type="file" id="image_upload_input">
+            </label>
         </div>
         <div class="info">
-        <h6 class="user-name">user name</h6>
-        <h6 class="user-email">example@email.com</h6>
+        <h6 class="user-name" id="full_name_placeholder"><?= $current_user["full_name"] ?></h6>
+        <h6 class="user-email" id="email_placeholder"><?= $current_user["email"] ?></h6>
         </div>
         </div>
-        <div class="form-inputs">
+        <form class="form-inputs" id="form_fields" action="../utils/database/update_user.php" method="POST">
             <div class="input-container">
-            <input type="text" name="name" placeholder="User name" class="app-input">
+            <input type="text" name="full_name" placeholder="User name" value="<?= $current_user["full_name"] ?>" class="app-input">
             <ion-icon name="person" class="icon"></ion-icon>
             </div>
             <div class="input-container">
-            <input name="email" type="email" placeholder="User Email" class="app-input">
+            <input name="email" type="email" placeholder="User Email" value="<?= $current_user["email"] ?>" class="app-input">
             <ion-icon name="at-circle" class="icon"></ion-icon>
             </div>
             <div class="input-container">
-            <input name="password" id="password" type="password" placeholder="Enter new Password" class="app-input">
+            <input name="password" id="password_field" type="password" placeholder="Enter new Password" class="app-input">
               <ion-icon id="eye-icon" class="icon" onclick="toggleHideInput()" name="eye-outline"></ion-icon>
             </div>
             <button class="btn auth-btn btn-large">Save</button>
-        </div>
+</form>
 </div>
 <div class="user-images-container">
     <div class="navigation" id="navigation">
@@ -108,6 +109,30 @@
                 icon.setAttribute("name" , "eye-outline");
             }
         }
+        function changeUi(e){
+            let newValue = e.target.value;
+            let inpName = e.target.getAttribute("name");
+            if(inpName === "password") return;
+            let id = `${inpName}_placeholder`;
+            let element =document.getElementById(id);
+            element.textContent = newValue;
+        }
+        const userForm =document.getElementById("user_form");
+        let formContainer = document.getElementById("form_fields");
+        formContainer.addEventListener("input", changeUi);
+        let profileImagePlaceHolder = document.querySelector("[data-name='profile-image']");
+        let profileImageInput = document.querySelector("#image_upload_input");
+        profileImageInput.addEventListener("change" , (e)=>{
+            let file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profileImagePlaceHolder.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        })
+        
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

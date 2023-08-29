@@ -308,3 +308,6 @@ main{
     }
   
 }
+#image_upload_input{
+    display : none;
+}
