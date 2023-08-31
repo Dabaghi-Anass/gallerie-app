@@ -294,6 +294,16 @@ main{
 .scroll-to-top:hover{
     background: var(--white);
 }
+
+#profile-save-btn{
+    position: absolute;
+    top: 100%;
+    transform: translateY(25%);
+    display: none;
+}
+#profile-save-btn:hover{
+    background: white;
+}
 @media (max-width : 800px){
     .profile-page{
         flex-direction: column;

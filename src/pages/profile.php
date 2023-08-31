@@ -16,19 +16,22 @@
 <body>
     <main class="container profile-page" >
     <div class="auth-container profile-container" id="user_form" >
+        <form action="../utils/database/media_upload.php" method="post"  enctype="multipart/form-data">
         <div class="image-container">
         <div class="profile-picture-container" data-count="20">
             <img class="profile-picture" data-name="profile-image" src="<?= $current_user["profile_image_url"] ?>" alt="">
-            <label class="overlay">
-                <ion-icon name="cloud-upload-outline"></ion-icon>
-                <input type="file" id="image_upload_input">
-            </label>
+                <label class="overlay">
+                    <ion-icon name="cloud-upload-outline"></ion-icon>
+                    <input type="file" name="uploaded_file" id="image_upload_input">
+                </label>
+                <button class="btn" style="--_bg : #40cf6d" id="profile-save-btn">Save</button>
+            </div>
+            <div class="info">
+                <h6 class="user-name" id="full_name_placeholder"><?= $current_user["full_name"] ?></h6>
+                <h6 class="user-email" id="email_placeholder"><?= $current_user["email"] ?></h6>
+            </div>
         </div>
-        <div class="info">
-        <h6 class="user-name" id="full_name_placeholder"><?= $current_user["full_name"] ?></h6>
-        <h6 class="user-email" id="email_placeholder"><?= $current_user["email"] ?></h6>
-        </div>
-        </div>
+    </form>
         <form class="form-inputs" id="form_fields" action="../utils/database/update_user.php" method="POST">
             <div class="input-container">
             <input type="text" name="full_name" placeholder="User name" value="<?= $current_user["full_name"] ?>" class="app-input">
@@ -130,6 +133,7 @@
                     profileImagePlaceHolder.src = e.target.result;
                 };
                 reader.readAsDataURL(file);
+                document.getElementById("profile-save-btn").style.display = "block";
             }
         })
         
