@@ -304,6 +304,15 @@ main{
 #profile-save-btn:hover{
     background: white;
 }
+.error-message{
+    color: var(--red);
+    text-align: center;
+    width: 100%;
+}
+.unactive{
+    pointer-events: none;
+    opacity: .6;
+}
 @media (max-width : 800px){
     .profile-page{
         flex-direction: column;
