@@ -2,7 +2,9 @@
     include("../utils/database/database_connection.php");
     $conn = connectToDb();
     include("../utils/database/get_current_user.php");
-    mysqli_close($conn);
+    if(empty($current_user)){
+        echo "<script> window.location = 'login.php';</script>";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,7 +101,7 @@
     </main>
     <a href="#navigation" class="btn scroll-to-top"><ion-icon name="chevron-up-circle-outline"></ion-icon></a>
     <script>
-        let passwordInput = document.getElementById("password");
+        let passwordInput = document.getElementById("password_field");
         let icon = document.getElementById("eye-icon");
         function toggleHideInput(){
             let inputType = passwordInput.getAttribute("type");
