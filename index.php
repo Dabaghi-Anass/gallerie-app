@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,12 +18,14 @@
         function redirect() {
          window.location = redirectURL;
       	}
-      let texts = ["GALLERIE-APP",
+      let texts = [
+       "GALLERIE-APP",
        "Exploring the Pixels: Unleashing Stunning Images for You...",
        "Gathering the Moments: Your Visual Journey is About to Begin",
        "Painting the Canvas: Bringing Spectacular Images Just for You.",
         "Crafting Visual Stories: Loading Images to Spark Your Imagination.",
-        "Weaving the Visual Tapestry: Images Loading to Inspire Your Day."];
+        "Weaving the Visual Tapestry: Images Loading to Inspire Your Day."
+        ];
       let currentIndex = 0;
       var id;
       const welcomeTextContainer = document.getElementById("welcome-text");
@@ -50,3 +51,4 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
+
