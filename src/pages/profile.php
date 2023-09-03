@@ -2,9 +2,10 @@
     include("../utils/database/database_connection.php");
     $conn = connectToDb();
     include("../utils/database/get_current_user.php");
-    if(empty($current_user)){
-        echo "<script> window.location = 'login.php';</script>";
+    if($currentUserUid == 0){
+        echo "<script>location = 'login.php';</script>";
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,7 @@
 <body>
     <main class="container profile-page" >
     <div class="auth-container profile-container" id="user_form" >
-        <form action="../utils/database/media_upload.php" method="post"  enctype="multipart/form-data">
+        <form action="../utils/database/media_upload.php" method="post" enctype="multipart/form-data">
         <div class="image-container">
         <div class="profile-picture-container" data-count="20">
             <img class="profile-picture" data-name="profile-image" src="<?= $current_user["profile_image_url"] ?>" alt="">
@@ -48,6 +49,7 @@
               <ion-icon id="eye-icon" class="icon" onclick="toggleHideInput()" name="eye-outline"></ion-icon>
             </div>
             <button class="btn auth-btn btn-large">Save</button>
+            <input type="button" value="log out" class="btn" style="--_bg : var(--red); margin-top : 1rem;" onclick="logout()">
 </form>
 </div>
 <div class="user-images-container">
@@ -138,7 +140,11 @@
                 document.getElementById("profile-save-btn").style.display = "block";
             }
         })
-        
+        function logout(){
+            let exp = new Date("2000-01-01");
+            document.cookie = `currentUserUid=0;expires=${exp.toUTCString()};path=/;domain=localhost;`;
+            window.location.reload()
+        }
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

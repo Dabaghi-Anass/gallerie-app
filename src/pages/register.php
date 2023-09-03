@@ -18,21 +18,21 @@
 </head>
 <body>
     <main class="container">
-    <form class="auth-container" id="form_fields" action="./profile.php" method="post">
+    <form class="auth-container" id="form_fields" action="../utils/database/create_user.php" method="post">
         <p>Register</p>
         <div class="form-inputs">
             <div class="input-container">
-            <input type="text" name="full_name" placeholder="Enter Your name" class="app-input">
+            <input type="text" required name="full_name" placeholder="Enter Your name" class="app-input">
             <ion-icon name="person" class="icon"></ion-icon>
             </div>
             <span class="error-message full_name"></span>
             <div class="input-container">
-                <input name="email" type="email" placeholder="Enter Your Email" class="app-input">
+                <input name="email" required type="email" placeholder="Enter Your Email" class="app-input">
                 <ion-icon name="at-circle" class="icon"></ion-icon>
             </div>
             <span class="error-message email"></span>
             <div class="input-container">
-                <input name="password" id="password" type="password" placeholder="Enter Your Password" class="app-input">
+                <input name="password" required id="password" type="password" placeholder="Enter Your Password" class="app-input">
                 <ion-icon id="eye-icon" class="icon" onclick="toggleHideInput()" name="eye-outline"></ion-icon>
             </div>
             <span class="error-message password"></span>

@@ -1,10 +1,12 @@
 <?php 
     include("./database_connection.php");
     $conn = connectToDb();
+    include("./get_current_user.php");
+    $current_user = getLoggedUser();
     $statement = $conn->prepare("UPDATE users SET full_name = ?,email = ? WHERE uid = ?");
     $name = $_POST["full_name"];
     $email = $_POST["email"];
-    $id = 0;
+    $id = $current_user["uid"];
     $password = $_POST["password"];
     if(strlen($password) !== 0){
         $statement = $conn->prepare("UPDATE users SET full_name = ?,email = ?,password = ? WHERE uid = ?");

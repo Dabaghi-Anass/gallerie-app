@@ -4,6 +4,9 @@
         $conn = connectToDb();
     }
     include("get_current_user.php");
+    $current_user = getLoggedUser();
+    if(!empty($current_user)){
+        echo $current_user["full_name"];
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_FILES["uploaded_file"])) {
         $targetDirectory = "../../../users_files/";
@@ -17,23 +20,21 @@
             mkdir($user_dir, 0755, true);
         }
         if (move_uploaded_file($_FILES["uploaded_file"]["tmp_name"], $targetFile)) {
-            echo "File uploaded successfully.";
             $query = "UPDATE users SET profile_image_url = ? WHERE uid = ?";
             $statement = $conn->prepare($query);
-            $id = $current_user["uid"];
+            $id = $currentUserUid;
             $path = "../../users_files/" .$id."/profile_image.".$ext;
             $statement->bind_param("si",$path, $id);
-            if ($statement->execute()) {
-                echo "<br>profile updated successfully!";
-            } else {
-                echo "<br>Error updating name: " . $statement->error;
-            }
+            $statement->execute();
         } else {
             echo "Error uploading file.";
         }
          } else {
         echo "No file uploaded.";
+        }
+        }
+        echo "<script> window.location = '../../pages/profile.php';</script>";
+    }else {
+        echo "<script> window.location = '../../pages/login.php';</script>";
     }
-    }
-    echo "<script> window.location = '../../pages/profile.php';</script>";
 ?>
