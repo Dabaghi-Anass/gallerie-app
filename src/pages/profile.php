@@ -40,16 +40,19 @@
             <input type="text" name="full_name" placeholder="User name" value="<?= $current_user["full_name"] ?>" class="app-input">
             <ion-icon name="person" class="icon"></ion-icon>
             </div>
+            <span class="error-message full_name"></span>
             <div class="input-container">
             <input name="email" type="email" placeholder="User Email" value="<?= $current_user["email"] ?>" class="app-input">
             <ion-icon name="at-circle" class="icon"></ion-icon>
             </div>
+            <span class="error-message email"></span>
             <div class="input-container">
             <input name="password" id="password_field" type="password" placeholder="Enter new Password" class="app-input">
               <ion-icon id="eye-icon" class="icon" onclick="toggleHideInput()" name="eye-outline"></ion-icon>
             </div>
-            <button class="btn auth-btn btn-large">Save</button>
-            <input type="button" value="log out" class="btn" style="--_bg : var(--red); margin-top : 1rem;" onclick="logout()">
+            <span class="error-message password"></span>
+            <button class="btn auth-btn btn-large" id="auth-btn">Save</button>
+            <input type="button" value="log out" class="btn" style="--_bg : var(--red); margin-top : .5rem;" onclick="logout()">
 </form>
 </div>
 <div class="user-images-container">
@@ -145,6 +148,73 @@
             document.cookie = `currentUserUid=0;expires=${exp.toUTCString()};path=/;domain=localhost;`;
             window.location.reload()
         }
+        const fieldsForm =  document.getElementById("form_fields");
+        const user = {
+            full_name : "",
+            email : "",
+            password : ""
+        }
+        const userErrors = {
+            full_name : "",
+            email : "",
+            password : ""
+        }
+        const validateName = (name) => {
+            if(name.length < 3) return "name can't be less than 3 characters";
+            return "";
+        } 
+        const validateEmail = (email) => {
+            if(email.length === 0) return "email is required";
+            let emailPattern = /.*@\w+\.\w+/;
+            if(!emailPattern.test(email)){
+                return "the provided input is not a valid email!";
+            }
+            return "";
+        } 
+        const validatePassword = (password) => {
+            if(password.length === 0) return "";
+            let passwordPattern = /.*(?=.*[A-Z]).*(?=.*\d).*/;
+            if(password.length <8) return  "password must be atleast 8 characters";
+            if(!passwordPattern.test(password)) return "password must include At least One Upper Case letter and 1 digit";
+            return "";
+        }   
+        const validateForm = (name,value) =>{
+            if(!name) return "";
+            switch(name){
+                case "full_name" :
+                    return validateName(value);
+                break;
+                case "email" : 
+                    return validateEmail(value)
+                    break;
+                case "password" : 
+                    return validatePassword(value);
+                    break;
+            }
+        }
+        const validateInputs = () =>{
+            for(let prop in userErrors){
+                if(userErrors[prop] !== "") return false;
+            }
+            return true;
+        }
+        fieldsForm.addEventListener("click",()=>{
+            let emailInp = document.querySelector(`[name=email]`);
+            let err1 =validateEmail(emailInp.value);
+            let emailErrorPlaceholder = document.querySelector(`.error-message.email`);
+            userErrors.email =err1;
+            emailErrorPlaceholder.textContent =err1;
+        })
+        fieldsForm.addEventListener("input", (e)=>{
+            let name = e.target.getAttribute("name");
+            let input = document.querySelector(`[name=${name}]`);
+            let errorPlaceholder = document.querySelector(`.error-message.${name}`);
+            user[name] = input.value;
+            userErrors[name] = validateForm(name,input.value);
+            errorPlaceholder.textContent =  userErrors[name];
+            let btn = document.getElementById("auth-btn");
+            btn.classList.toggle("unactive",!validateInputs());
+        })
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

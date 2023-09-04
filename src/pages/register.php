@@ -82,7 +82,7 @@
         } 
         const validatePassword = (password) => {
             if(password.length === 0) return "password is required";
-            let passwordPattern = /.*[A-Z].*[0-9].*/;
+            let passwordPattern = /.*(?=.*[A-Z]).*(?=.*\d).*/;
             
             if(password.length <8) return  "password must be atleast 8 characters";
             if(!passwordPattern.test(password)) return "password must include At least One Upper Case letter and 1 digit";
