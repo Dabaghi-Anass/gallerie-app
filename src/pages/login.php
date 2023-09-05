@@ -1,3 +1,12 @@
+<?php 
+  include("../utils/database/database_connection.php");
+  include("../utils/database/get_current_user.php");
+  $current_user = getLoggedUser();
+  if(!empty($current_user)){
+    echo "<script> window.location = 'profile.php';</script>";
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +18,15 @@
 </head>
 <body>
     <main class="container">
-    <form class="auth-container" action="./profile.php" method="post">
+    <form class="auth-container" action="/src/utils/database/auth.php" method="post">
         <p>Login</p>
         <div class="form-inputs">
             <div class="input-container">
-            <input name="email" type="email" placeholder="Enter Your Email" class="app-input">
+            <input required name="email" type="email" placeholder="Enter Your Email" class="app-input">
             <ion-icon name="at-circle" class="icon"></ion-icon>
             </div>
             <div class="input-container">
-            <input name="password" id="password" type="password" placeholder="Enter Your Password" class="app-input">
+            <input required name="password" id="password" type="password" placeholder="Enter Your Password" class="app-input">
               <ion-icon id="eye-icon" class="icon" onclick="toggleHideInput()" name="eye-outline"></ion-icon>
             </div>
             <button class="btn auth-btn btn-large">Login</button>
