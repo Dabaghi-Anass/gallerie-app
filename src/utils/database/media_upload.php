@@ -6,7 +6,6 @@
     include("get_current_user.php");
     $current_user = getLoggedUser();
     if(!empty($current_user)){
-        echo $current_user["full_name"];
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_FILES["uploaded_file"])) {
         $targetDirectory = "../../../users_files/";
