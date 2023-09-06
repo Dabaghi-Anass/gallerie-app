@@ -330,3 +330,42 @@ main{
 #image_upload_input{
     display : none;
 }
+.navbar{
+    width: 100%;
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.app-logo{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+}
+.app-logo span{
+    font-size:  25px; 
+    text-transform: uppercase;
+
+}
+.app-logo img{
+    width: 3rem;
+}
+header{
+    padding-inline: 2rem;
+
+}
+.links a{
+      text-decoration: none;
+      color: var(--dark-grey);
+      padding-inline: .5rem;
+}
+.links a:hover{
+    opacity: .7;
+}
+   
+    

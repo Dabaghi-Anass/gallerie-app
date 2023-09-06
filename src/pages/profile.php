@@ -17,6 +17,7 @@
     <title>Gallerie App</title>
 </head>
 <body>
+    <?php include("../components/header.php") ?>
     <main class="container profile-page" >
     <div class="auth-container profile-container" id="user_form" >
         <form action="../utils/database/media_upload.php" method="post" enctype="multipart/form-data">
