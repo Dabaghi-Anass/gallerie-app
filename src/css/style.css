@@ -313,6 +313,68 @@ main{
     pointer-events: none;
     opacity: .6;
 }
+#image_upload_input{
+    display : none;
+}
+.navbar{
+    width: 100%;
+    padding: .7rem .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom : 1px solid #00000020;
+
+}
+.app-logo{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+}
+.app-logo span{
+    color : var(--dark-grey);
+    font-size:  25px; 
+    text-transform: uppercase;
+
+}
+.app-logo img{
+    width: 3rem;
+}
+header{
+    padding-inline: 1rem;
+    background : var(--white);
+
+}
+.links a{
+      text-decoration: none;
+      color: var(--dark-grey);
+      padding-inline: .5rem;
+}
+.links a:hover{
+    opacity: .7;
+}
+
+*::-webkit-scrollbar-track
+{
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	background-color: black;
+}
+   
+
+
 @media (max-width : 800px){
     .profile-page{
         flex-direction: column;
@@ -327,45 +389,3 @@ main{
     }
   
 }
-#image_upload_input{
-    display : none;
-}
-.navbar{
-    width: 100%;
-    padding-block: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-}
-.app-logo{
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-
-}
-.app-logo span{
-    font-size:  25px; 
-    text-transform: uppercase;
-
-}
-.app-logo img{
-    width: 3rem;
-}
-header{
-    padding-inline: 2rem;
-
-}
-.links a{
-      text-decoration: none;
-      color: var(--dark-grey);
-      padding-inline: .5rem;
-}
-.links a:hover{
-    opacity: .7;
-}
-   
-    
