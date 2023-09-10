@@ -356,6 +356,21 @@ header{
 .links a:hover{
     opacity: .7;
 }
+#empty-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+.upload-file-form{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.information{
+    color: rgba(0 0 0 / 60%);
+    text-align: center;
+}
 
 *::-webkit-scrollbar-track
 {
