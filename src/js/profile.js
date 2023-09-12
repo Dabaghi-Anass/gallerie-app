@@ -1,6 +1,6 @@
 let passwordInput = document.getElementById("password_field");
-        let icon = document.getElementById("eye-icon");
         function toggleHideInput(){
+            let icon = document.getElementById("eye-icon");
             let inputType = passwordInput.getAttribute("type");
             if(inputType === "password"){
                 passwordInput.setAttribute("type" , "text");
@@ -8,7 +8,7 @@ let passwordInput = document.getElementById("password_field");
             }
             else{
                 passwordInput.setAttribute("type" , "password");
-                icon.setAttribute("data-id" , "eye-outline");
+                icon.setAttribute("name" , "eye-outline");
             }
         }
         function changeUi(e){
