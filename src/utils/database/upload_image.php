@@ -24,6 +24,11 @@
             if(mysqli_num_rows($result) > 0){
                 $image_id = mysqli_fetch_assoc($result)["id"] + 1;
             }
+            $statement = $conn->prepare("INSERT INTO images VALUES(?,?,?, '');");
+            $statement->bind_param("iis", $currentUserUid,$image_id, $targetFile);
+            if($statement->execute()){
+                header("Location: /src/pages/profile.php");
+            }
         } else {
             echo "Error uploading file.";
         }

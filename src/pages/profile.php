@@ -26,9 +26,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+    <script defer>let IMAGE_ID_TO_BE_DELETED = 0;</script>
     <title>Gallerie App</title>
 </head>
 <body>
+    <div class="modal">
+        <span class="modal-close-btn">
+            &#10006;
+        </span>
+        <div class="delete-section">
+            <h1>confirm delete image</h1>
+            <p>this action is not reversible</p>
+            <form class="btns" action="../utils/database/delete_image.php" method="post">
+                <input type="text" name="image-id" value="0" style="display : none;">
+                <button class="btn" style="--_bg : var(--red)" id="delete-button">DELETE</button>
+                <button class="btn" style="--_bg : var(--light-grey)" id="modal-cancel-btn">Cancel</button>
+            </form>
+        </div>
+    </div>
     <?php include("../components/header.php") ?>
     <main class="container profile-page" >
     <div class="auth-container profile-container" id="user_form" >
@@ -70,16 +85,7 @@
 </div>
 <div class="user-images-container">
     <div class="navigation" id="navigation">
-        <div class="input-container">
-                <input name="search" id="search" type="search" placeholder="search..." class="app-input">
-                <ion-icon  class="icon search-icon" name="search-outline"></ion-icon>
-                </div>
         <div class="buttons">
-            <div class="spinner">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
             <form class="upload-file-form"action="/src/utils/database/upload_image.php" method="post" enctype="multipart/form-data">
                 <label style="--_bg:var(--green);" class="btn"><ion-icon name="cloud-upload-outline"></ion-icon>
                 <input name="image"  type="file" id="image-upload-input" style="display :none;">
@@ -104,7 +110,7 @@
                         <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
                         <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
                         <div class="grow"></div>
-                        <ion-icon style="--clr: var(--red);"  class="icon-btn" name="trash-outline"></ion-icon>
+                        <ion-icon data-image-identifier='.$image["id"].' style="--clr: var(--red);"  class=" delete-image-btn icon-btn" name="trash-outline"></ion-icon>
                     </div>
                     </div>
                     ';
@@ -113,10 +119,11 @@
         ?>
             
     </div>
-
+    
     </main>
     <a href="#navigation" class="btn scroll-to-top"><ion-icon name="chevron-up-circle-outline"></ion-icon></a>
     <script src="../js/profile.js"></script>
+    <script src="../js/control.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

@@ -8,7 +8,7 @@ let passwordInput = document.getElementById("password_field");
             }
             else{
                 passwordInput.setAttribute("type" , "password");
-                icon.setAttribute("name" , "eye-outline");
+                icon.setAttribute("data-id" , "eye-outline");
             }
         }
         function changeUi(e){
@@ -109,7 +109,6 @@ let passwordInput = document.getElementById("password_field");
         })
 
 const imageUploadInput = document.getElementById("image-upload-input");
-
 imageUploadInput.addEventListener("change" , (e)=>{
     document.querySelector(".up-btn").style.display = "flex";
 })
