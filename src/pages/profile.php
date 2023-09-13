@@ -1,4 +1,5 @@
 <?php
+       
     include("../utils/database/database_connection.php");
     $conn = connectToDb();
     include("../utils/database/get_current_user.php");
@@ -17,7 +18,8 @@
             $statement->close();
         }
     }
-
+     $userfolder = $_SERVER['HTTP_HOST']."/users_files/".$currentUserUid."/";
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,8 +108,8 @@
                     <div class="image">
                     <img src='.$image["link"].' alt="gallerie-app" class="">
                     <div class="icons">
-                        <ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline"></ion-icon>
-                        <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline"></ion-icon>
+                        <a href='.$image["link"].' download ><ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline" ></ion-icon></a>
+                        <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline" onclick="copy(`'.$image['link'].'`)"></ion-icon>
                         <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
                         <div class="grow"></div>
                         <ion-icon data-image-identifier='.$image["id"].' style="--clr: var(--red);"  class=" delete-image-btn icon-btn" name="trash-outline"></ion-icon>
@@ -121,7 +123,14 @@
     </div>
     
     </main>
+    
     <a href="#navigation" class="btn scroll-to-top"><ion-icon name="chevron-up-circle-outline"></ion-icon></a>
+    <script> function copy(s){
+        let f= <?= $userfolder ?>;
+        let name=s.substring(s.lastIndexOf("/")+1);
+        name= f+ name;
+        console.log (name);
+    }</script>
     <script src="../js/profile.js"></script>
     <script src="../js/control.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
