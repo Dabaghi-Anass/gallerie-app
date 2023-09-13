@@ -125,12 +125,14 @@
     </main>
     
     <a href="#navigation" class="btn scroll-to-top"><ion-icon name="chevron-up-circle-outline"></ion-icon></a>
-    <script> function copy(s){
-        let f= <?= $userfolder ?>;
-        let name=s.substring(s.lastIndexOf("/")+1);
-        name= f+ name;
-        console.log (name);
-    }</script>
+    <script>
+        function copy(s){
+            let rootFolder = "<?= $userfolder ?>";
+            let name = rootFolder + s.substring(s.lastIndexOf("/")+1);
+            navigator.clipboard.writeText(name);
+            alert("image link copied to clipboard");
+        }
+    </script>
     <script src="../js/profile.js"></script>
     <script src="../js/control.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
