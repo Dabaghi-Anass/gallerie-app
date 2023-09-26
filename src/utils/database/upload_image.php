@@ -1,8 +1,5 @@
 <?php
     include("database_connection.php");
-    if(!isset($conn) || empty($conn)){
-        $conn = connectToDb();
-    }
     include("get_current_user.php");
     $current_user = getLoggedUser();
     if(!empty($current_user)){
@@ -24,7 +21,7 @@
             if(mysqli_num_rows($result) > 0){
                 $image_id = mysqli_fetch_assoc($result)["id"] + 1;
             }
-            $statement = $conn->prepare("INSERT INTO images VALUES(?,?,?, '');");
+            $statement = $conn->prepare("INSERT INTO images VALUES(?,?,?);");
             $statement->bind_param("iis", $currentUserUid,$image_id, $targetFile);
             if($statement->execute()){
                 header("Location: /src/pages/profile.php");

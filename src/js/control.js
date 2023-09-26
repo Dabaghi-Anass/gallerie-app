@@ -24,3 +24,18 @@ modalCancelBtn.addEventListener("click",(e)=>{
     const modal = document.querySelector(".modal");
     modal.style.display = "none";
 })
+
+async function getData(formData){
+    const response = await fetch("../utils/database/like_image.php", {
+        method : "POST",
+        body : formData
+    });
+    console.log(await response.text());
+} 
+function like(id, uid){
+    const formData = new FormData();
+    formData.append("id", id);
+    formData.append("uid", uid);
+    getData(formData);
+    
+}

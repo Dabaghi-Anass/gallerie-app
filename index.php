@@ -42,7 +42,7 @@
         	if (currentIndex >= texts.length) currentIndex = 0;
         	welcomeTextContainer.innerHTML = texts[currentIndex];
         	currentIndex++;
-        	setTimeout(changeText,3000)
+        	setTimeout(changeText,3000);
       }
       changeText()
       id = setTimeout(skip,3000 * texts.length);

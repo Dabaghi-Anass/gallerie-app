@@ -3,6 +3,7 @@
     include("../utils/database/database_connection.php");
     $conn = connectToDb();
     include("../utils/database/get_current_user.php");
+    include("../utils/database/fetch_likes.php");
     $images = array();
     if($currentUserUid == 0){
         echo "<script>location = 'login.php';</script>";
@@ -12,9 +13,11 @@
         $statement->bind_param("i",$currentUserUid);
         if($statement->execute()){
             $result = $statement->get_result();
+            $statement->store_result();
             while ($row = $result->fetch_assoc()) {
                 $images[] = $row;
             }
+            $statement->free_result();
             $statement->close();
         }
     }
@@ -51,7 +54,7 @@
     <div class="auth-container profile-container" id="user_form" >
         <form action="../utils/database/media_upload.php" method="post" enctype="multipart/form-data">
         <div class="image-container">
-        <div class="profile-picture-container" data-count="20">
+        <div class="profile-picture-container" data-count="<?=count($images)?>">
             <img class="profile-picture" data-name="profile-image" src="<?= $current_user["profile_image_url"] ?>" alt="">
                 <label class="overlay">
                     <ion-icon name="cloud-upload-outline"></ion-icon>
@@ -104,13 +107,14 @@
             }
             else{
                 foreach($images as $image){
+                    $icon_name = in_array($image["id"],$images_ids) ? "star" : "star-outline";
                     echo '
                     <div class="image">
                     <img src='.$image["link"].' alt="gallerie-app" class="">
                     <div class="icons">
                         <a href='.$image["link"].' download ><ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline" ></ion-icon></a>
                         <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline" onclick="copy(`'.$image['link'].'`)"></ion-icon>
-                        <ion-icon style="--clr: #FFA600;" class="icon-btn" name="star-outline"></ion-icon>
+                        <ion-icon onclick="like('.$image["id"].','.$currentUserUid.')" style="--clr: #FFA600;" class="icon-btn" name="'.$icon_name.'"></ion-icon>
                         <div class="grow"></div>
                         <ion-icon data-image-identifier='.$image["id"].' style="--clr: var(--red);"  class=" delete-image-btn icon-btn" name="trash-outline"></ion-icon>
                     </div>
