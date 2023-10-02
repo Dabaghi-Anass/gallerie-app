@@ -114,7 +114,7 @@
                     <div class="icons">
                         <a href='.$image["link"].' download ><ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline" ></ion-icon></a>
                         <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline" onclick="copy(`'.$image['link'].'`)"></ion-icon>
-                        <ion-icon onclick="like('.$image["id"].','.$currentUserUid.')" style="--clr: #FFA600;" class="icon-btn" name="'.$icon_name.'"></ion-icon>
+                        <ion-icon data-id="'.$image["id"].'" data-uid="'.$currentUserUid.'" style="--clr: #FFA600;" class="icon-btn star-image" name="'.$icon_name.'"></ion-icon>
                         <div class="grow"></div>
                         <ion-icon data-image-identifier='.$image["id"].' style="--clr: var(--red);"  class=" delete-image-btn icon-btn" name="trash-outline"></ion-icon>
                     </div>

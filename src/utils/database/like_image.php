@@ -1,5 +1,5 @@
 <?php
-    include("database_connectiogn.php");
+    include("database_connection.php");
     include("get_current_user.php");
     $current_user = getLoggedUser();
     $get_max_uid_st = $conn->prepare("select max(like_id) +1 as id from likes;");
@@ -20,6 +20,5 @@
     $add_like_st->bind_param("iii",$_POST["id"],$_POST["uid"],$max_uid);
     if($add_like_st->execute()){
         echo "added like";
-
     }
 ?>

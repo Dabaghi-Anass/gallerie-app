@@ -25,8 +25,14 @@ modalCancelBtn.addEventListener("click",(e)=>{
     modal.style.display = "none";
 })
 
-async function getData(formData){
+async function sendLikeRequest(formData){
     const response = await fetch("../utils/database/like_image.php", {
+        method : "POST",
+        body : formData
+    });
+} 
+async function sendDislikeRequest(formData){
+    const response = await fetch("../utils/database/dislike_image.php", {
         method : "POST",
         body : formData
     });
@@ -36,6 +42,26 @@ function like(id, uid){
     const formData = new FormData();
     formData.append("id", id);
     formData.append("uid", uid);
-    getData(formData);
-    
+    sendLikeRequest(formData);
 }
+function dislike(id, uid){
+    const formData = new FormData();
+    formData.append("id", id);
+    formData.append("uid", uid);
+    sendDislikeRequest(formData);
+}
+let likeIcon = document.querySelectorAll(".star-image")
+
+likeIcon.forEach(icon => {
+    icon.addEventListener("click" , ({ currentTarget }) => {
+        let {id , uid} = currentTarget.dataset;
+        const iconName = currentTarget.getAttribute("name")
+        if(iconName === "star-outline"){
+            currentTarget.setAttribute("name" , "star")
+            like(+id,+uid)
+        }else{
+            currentTarget.setAttribute("name" , "star-outline")
+            dislike(+id,+uid)
+        }
+    })
+})
