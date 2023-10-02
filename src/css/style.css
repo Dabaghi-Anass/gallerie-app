@@ -437,3 +437,6 @@ header{
     }
   
 }
+.home.user-images-container{
+    padding-inline: 1rem;
+}

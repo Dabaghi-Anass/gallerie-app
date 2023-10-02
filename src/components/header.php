@@ -6,7 +6,7 @@
          </a>
          <div class="links">
             <a href="../pages/profile.php">profile</a>
-            <a href="#">home</a>
+            <a href="../pages/home.php">home</a>
          </div>
     </nav>
 
