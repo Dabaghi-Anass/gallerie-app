@@ -72,7 +72,7 @@
                     $icon_name = in_array($image["id"],$images_ids) ? "star" : "star-outline";
                     echo '
                     <div class="image">
-                    <img src='.$image["link"].' alt="gallerie-app-image" class="">
+                    <img src="'.$image["link"].'" alt="gallerie-app-image" class="">
                     <div class="icons">
                         <a href='.$image["link"].' download ><ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline" ></ion-icon></a>
                         <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline" onclick="copy(`'.$image['link'].'`)"></ion-icon>
