@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
     <script defer>let IMAGE_ID_TO_BE_DELETED = 0;</script>
-    <title>home - Gallerie App</title>
+    <title>Home - Gallerie App</title>
 </head>
 <body>
     <div class="modal">

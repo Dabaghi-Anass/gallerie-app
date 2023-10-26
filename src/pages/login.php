@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
-    <title>Gallerie App</title>
+    <title>Login - Gallerie App</title>
 </head>
 <body>
     <main class="container">
