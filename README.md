@@ -16,6 +16,6 @@ Meet the team behind GALLERIE APP:
 | Name  | Email                          | Instagram                       |
 | ----- | ------------------------------ | ------------------------------- |
 | Anass | anass.debbaghi123@gmail.com    | [anass](https://www.instagram.com/debbaghianass/) |
-| Ilafe | ilafefg@gmail.com              | [ilaf](https://www.instagram.com/_ilafefg/) |
+| Ilafe | ilafefg@gmail.com              | [ilaf](https://www.instagram.com/_ilafefg_/) |
 
 Join us in this creative journey as we aim to provide a rich source of images for your projects and ideas. Explore, share, and discover the world of visual content with GALLERIE APP.
