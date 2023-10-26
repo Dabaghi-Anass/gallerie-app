@@ -92,7 +92,7 @@
     <div class="navigation" id="navigation">
         <div class="buttons">
             <form class="upload-file-form"action="/src/utils/database/upload_image.php" method="post" enctype="multipart/form-data">
-                <label style="--_bg:var(--green);" class="btn"><ion-icon name="cloud-upload-outline"></ion-icon>
+                <label style="--_bg:var(--green);" class="btn" id="upload-image-label"><ion-icon name="cloud-upload-outline"></ion-icon>
                 <input name="image"  type="file" id="image-upload-input" style="display :none;">
                     upload
                 </label>
@@ -130,9 +130,8 @@
     
     <a href="#navigation" class="btn scroll-to-top"><ion-icon name="chevron-up-circle-outline"></ion-icon></a>
     <script>
-        function copy(s){
-            let rootFolder = "<?= $userfolder ?>";
-            let name = rootFolder + s.substring(s.lastIndexOf("/")+1);
+         function copy(s){
+            let name = s.replace("../../../","<?php echo $_SERVER['HTTP_HOST'] ?>"+"/");
             navigator.clipboard.writeText(name);
             alert("image link copied to clipboard");
         }

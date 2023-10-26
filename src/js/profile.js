@@ -108,7 +108,3 @@ let passwordInput = document.getElementById("password_field");
             btn.classList.toggle("unactive",!validateInputs());
         })
 
-const imageUploadInput = document.getElementById("image-upload-input");
-imageUploadInput.addEventListener("change" , (e)=>{
-    document.querySelector(".up-btn").style.display = "flex";
-})

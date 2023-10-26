@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar">
-         <a href="/src/pages/profile.php" class="app-logo">
+         <a href="/src/pages/home.php" class="app-logo">
                 <img src="../assets/icons/app-logo.png" alt="logo" >
                 <span>gallerie-app</span>
          </a>

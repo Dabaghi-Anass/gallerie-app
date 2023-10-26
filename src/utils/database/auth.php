@@ -38,7 +38,7 @@
                 setcookie("currentUserUid", $uid, time() + 93312000, "/", "localhost");
                 include("./get_current_user.php");
                 $currentUser = getLoggedUser();
-                echo "<script>location = '/src/pages/profile.php'</script>";
+                echo "<script>location = '/src/pages/home.php'</script>";
             }else{
                 echo "
                 <div style='width : fit-content;height : 100%;margin-inline : auto;display : flex;flex-direction : column;align-items : center;gap:2rem;padding:2rem;'>

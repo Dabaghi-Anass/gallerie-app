@@ -13,11 +13,17 @@
             $maxuid = $max_uid["uid"] + 1;
         }
     }
-    $statement = $conn->prepare("INSERT INTO users VALUES(?,?,?,?,'/src/assets/images/profile.svg')");
+    $user_folder = "../../../users_files/" . $maxuid;
+    if (!is_dir($user_folder)) {
+        mkdir($user_folder, 0755, true);
+    }
+    $statement = $conn->prepare("INSERT INTO users VALUES(?,?,?,?,'".$user_folder."/profile_image.jpg');");
     $statement->bind_param("isss",$maxuid,$name ,$email,$password);
         if ($statement->execute()) {
-            echo "user created successfully!";
             setcookie("currentUserUid", $maxuid, time() + 93312000, "/", "localhost");
+            $sourceImagePath = "../../assets/images/profile.jpg";
+            $destinationImagePath = $user_folder . "/profile_image.jpg";
+            copy($sourceImagePath, $destinationImagePath);
             echo "<script>location = '../../pages/profile.php';</script>";
         } else {
             echo "

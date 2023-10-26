@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
     <script defer>let IMAGE_ID_TO_BE_DELETED = 0;</script>
-    <title>Gallerie App</title>
+    <title>home - Gallerie App</title>
 </head>
 <body>
     <div class="modal">
@@ -54,8 +54,8 @@
     <div class="navigation" id="navigation">
         <div class="buttons">
             <form class="upload-file-form"action="/src/utils/database/upload_image.php" method="post" enctype="multipart/form-data">
-                <label style="--_bg:var(--green);" class="btn"><ion-icon name="cloud-upload-outline"></ion-icon>
-                <input name="image"  type="file" id="image-upload-input" style="display :none;">
+                <label style="--_bg:var(--green);" class="btn" id="upload-image-label"><ion-icon name="cloud-upload-outline" ></ion-icon>
+                    <input name="image" type="file" id="image-upload-input" style="display :none;">
                     upload
                 </label>
                 <button class="btn up-btn" style="display : none;--_bg : hsl(200,100%,50%);">save</button>
@@ -72,13 +72,13 @@
                     $icon_name = in_array($image["id"],$images_ids) ? "star" : "star-outline";
                     echo '
                     <div class="image">
-                    <img src='.$image["link"].' alt="gallerie-app" class="">
+                    <img src='.$image["link"].' alt="gallerie-app-image" class="">
                     <div class="icons">
                         <a href='.$image["link"].' download ><ion-icon style="--clr: #1C274C;" class="icon-btn" name="download-outline" ></ion-icon></a>
                         <ion-icon style="--clr:#1C274C;"class="icon-btn"  name="share-social-outline" onclick="copy(`'.$image['link'].'`)"></ion-icon>
                         <ion-icon data-id="'.$image["id"].'" data-uid="'.$currentUserUid.'" style="--clr: #FFA600;" class="icon-btn star-image" name="'.$icon_name.'"></ion-icon>
                         <div class="grow"></div>
-                        <ion-icon data-image-identifier='.$image["id"].' style="--clr: var(--red);"  class=" delete-image-btn icon-btn" name="trash-outline"></ion-icon>
+                        '.($image["uid"] == $currentUserUid ? '<ion-icon data-image-identifier='.$image["id"].' style="--clr: var(--red);"  class=" delete-image-btn icon-btn" name="trash-outline"></ion-icon>' : '<img class="user-mini-image" src="/users_files/'.$image['uid'].'/profile_image.jpg" >').'
                     </div>
                     </div>
                     ';
@@ -93,13 +93,11 @@
     <a href="#navigation" class="btn scroll-to-top"><ion-icon name="chevron-up-circle-outline"></ion-icon></a>
     <script>
         function copy(s){
-            let rootFolder = "<?= $userfolder ?>";
-            let name = rootFolder + s.substring(s.lastIndexOf("/")+1);
+            let name = s.replace("../../../","<?php echo $_SERVER['HTTP_HOST'] ?>"+"/");
             navigator.clipboard.writeText(name);
             alert("image link copied to clipboard");
         }
     </script>
-    <script src="../js/profile.js"></script>
     <script src="../js/control.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

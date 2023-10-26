@@ -65,3 +65,8 @@ likeIcon.forEach(icon => {
         }
     })
 })
+const imageUploadInput = document.getElementById("image-upload-input");
+imageUploadInput.addEventListener("change" , (e)=>{
+    document.querySelector(".up-btn").style.display = "flex";
+    document.querySelector("#upload-image-label").style.display = "none";
+})

@@ -218,7 +218,7 @@ main{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--blue);
+    background-color: #d5ffdf;
     padding: 1rem ;
     gap: 1rem;
 
@@ -405,6 +405,12 @@ header{
     align-items: center;
     flex-direction: row-reverse;
 }
+.user-mini-image{
+    aspect-ratio: 1;
+    max-width: 2rem;
+    margin-right: .2rem;
+    border-radius: 50%;
+}
 *::-webkit-scrollbar-track
 {
     background-color: #F5F5F5;
@@ -438,5 +444,5 @@ header{
   
 }
 .home.user-images-container{
-    padding-inline: 1rem;
+    padding: 1rem;
 }
