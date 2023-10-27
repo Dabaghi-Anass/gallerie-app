@@ -12,4 +12,5 @@
         $statement->free_result();
         $statement->close();
     }
+    mysqli_store_result($conn);
 ?>
