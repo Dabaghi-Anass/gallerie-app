@@ -10,5 +10,6 @@
             $images_ids[] = $row['image_id'];
         }
         $statement->free_result();
+        $statement->close();
     }
 ?>

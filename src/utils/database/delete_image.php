@@ -19,6 +19,9 @@
                 $statement = $conn->prepare("DELETE FROM images WHERE id=?;");
                 $statement->bind_param("i", $image_to_be_deleted);
                 if($statement->execute()){
+                    $statement->store_result();
+                    $statement->free_result();
+                    $statement->close();
                     // If the deletion is successful, provide a success message
                     // echo "Image deleted successfully!";
                     echo "

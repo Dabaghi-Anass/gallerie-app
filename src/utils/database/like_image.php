@@ -14,11 +14,14 @@
             }
         } 
         $get_max_uid_st->free_result();
+        $get_max_uid_st->close();
         $result->close();
     }
     $add_like_st = $conn->prepare("insert into likes values(?,?,?)");
     $add_like_st->bind_param("iii",$_POST["id"],$_POST["uid"],$max_uid);
     if($add_like_st->execute()){
-        echo "added like";
+        $add_like_st->store_result();
+        $add_like_st->free_result();
+        $add_like_st->close();
     }
 ?>

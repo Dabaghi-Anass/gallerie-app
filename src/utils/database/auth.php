@@ -34,6 +34,7 @@
             $state->bind_result($uid,$db_pass);
             $state->fetch();
             $state->free_result();
+            $state->close();
             if($db_pass === $password){
                 setcookie("currentUserUid", $uid, time() + 93312000, "/", "localhost");
                 include("./get_current_user.php");

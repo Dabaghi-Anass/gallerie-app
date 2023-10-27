@@ -6,6 +6,7 @@
     $password = $_POST["password"];
     $max_uid_query = "SELECT MAX(uid) AS uid FROM users;";
     $query = mysqli_query($conn,$max_uid_query);
+    mysqli_store_result($conn);
     $maxuid = 1;
     if(mysqli_num_rows($query) > 0){
         $max_uid = mysqli_fetch_assoc($query);
@@ -20,10 +21,13 @@
     $statement = $conn->prepare("INSERT INTO users VALUES(?,?,?,?,'".$user_folder."/profile_image.jpg');");
     $statement->bind_param("isss",$maxuid,$name ,$email,$password);
         if ($statement->execute()) {
+            $statement->store_result();
             setcookie("currentUserUid", $maxuid, time() + 93312000, "/", "localhost");
             $sourceImagePath = "../../assets/images/profile.jpg";
             $destinationImagePath = $user_folder . "/profile_image.jpg";
             copy($sourceImagePath, $destinationImagePath);
+            $statement->free_result();
+            $statement->close();
             echo "<script>location = '../../pages/profile.php';</script>";
         } else {
             echo "

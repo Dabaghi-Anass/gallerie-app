@@ -16,6 +16,9 @@
         $statement->bind_param("ssi",$name ,$email, $id);
     }
     if ($statement->execute()) {
+        $statement->store_result();
+        $statement->free_result();
+        $statement->close();
         echo "Name updated successfully!";
     } else {
         echo "Error updating name: " . $statement->error;

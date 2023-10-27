@@ -37,6 +37,9 @@ if (!empty($current_user)) {
                     $path = "../../users_files/" . $id . "/profile_image.jpg";
                     $statement->bind_param("si", $path, $id);
                     $statement->execute();
+                    $statement->store_result();
+                    $statement->free_result();
+                    $statement->close();
                 }
             } else {
                 echo "Error uploading file.";

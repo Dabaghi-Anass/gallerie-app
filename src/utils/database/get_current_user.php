@@ -12,6 +12,7 @@
     if(mysqli_num_rows($result) > 0){
         $current_user = mysqli_fetch_assoc($result);
     }
+    mysqli_store_result($conn);
     function getLoggedUser(){
         global $current_user;
         global $currentUserUid;
@@ -21,6 +22,7 @@
         if(mysqli_num_rows($result) > 0){
             $current_user = mysqli_fetch_assoc($result);
         }
+        mysqli_store_result($conn);
         return $current_user;
     }
 ?>

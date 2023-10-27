@@ -21,9 +21,13 @@
             if(mysqli_num_rows($result) > 0){
                 $image_id = mysqli_fetch_assoc($result)["id"] + 1;
             }
+            mysqli_store_result($conn);
             $statement = $conn->prepare("INSERT INTO images VALUES(?,?,?);");
             $statement->bind_param("iis", $currentUserUid,$image_id, $targetFile);
             if($statement->execute()){
+                $statement->store_result();
+                $statement->free_result();
+                $statement->close();
                 header("Location: /src/pages/profile.php");
             }
         } else {

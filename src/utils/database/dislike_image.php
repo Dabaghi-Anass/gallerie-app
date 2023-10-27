@@ -5,4 +5,7 @@
     $delete_statement = $conn->prepare("DELETE from likes where image_id=? and user_id=?;");
     $delete_statement->bind_param("ii" ,$_POST["id"],$_POST["uid"]);
     $delete_statement->execute();
+    $statement->store_result();
+    $statement->free_result();
+    $statement->close();
 ?>
